@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-# Read error code data with error handling
+
 try:
     error_codes = []
     counts = []
@@ -13,11 +13,11 @@ try:
                 error_codes.append(int(code))
                 counts.append(int(count))
     
-    # Debugging: print parsed data
+
     print("Error Codes:", error_codes)
     print("Counts:", counts)
     
-    # Create bar chart with enhanced styling
+    #bar chart
     plt.figure(figsize=(10, 6))
     plt.bar(error_codes, counts, color='skyblue', edgecolor='navy')
     plt.title('Error Code Frequency', fontsize=15)
