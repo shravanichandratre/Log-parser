@@ -1,18 +1,17 @@
 #!/bin/bash
 
-# Ensure log file exists
+#log file exists
 if [ ! -f logs.txt ]; then
     echo "Log file not found!"
     exit 1
 fi
 
-# Extract errors
+#errors
 grep "ERROR" logs.txt > errors.txt
 
-# Count unique error codes
+#counting unique error codes
 awk '{print $4}' errors.txt | sort | uniq -c > error_codes_for_viz.txt
 
-# Display contents for verification
 echo "Errors found:"
 cat errors.txt
 
